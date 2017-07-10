@@ -1,6 +1,8 @@
-Custom Kitkat Kernel Source For Wiko Bloom , Micromax Unite 2 and other clones
+# infinity_kernel_micromax_a106
+>> Micromax A106 (Unite 2) upstreamed kernel v3.4.113. All new stuffs added including (OC, Gov, Hotplugs, cpio, io schedulers,etc). Thanks to my brother Manjot Sidhu for releasing Kernel Source.
+Custom Kitkat Kernel Source For Wiko Bloom , Micromax Unite 2 and other clones.
 ------
-Version :- 3.4.67 (kitkat)
+Version :- 3.4.113 (Kitkat)
 
 Status :- Stable
 
@@ -8,7 +10,7 @@ Bugs :- N/A
 
 Contributors
 ------
->GOD , U , Manjot Sidhu , Monty Kumar(helping) , Ranjan(my all time mentor) , Divyrajsinh Jadeja(Testing) , Anurag D'Cruz(encouraged me) and each and every person of unite 2 who inspired me to do this ... Thank You Every Much 
+>GOD , Sunmughan Swamy(Maintainer) , Manjot Sidhu (Created this Kernel Source) , Monty Kumar(helping) , Ranjan(my all time mentor) , Divyrajsinh Jadeja(Testing) , Anurag D'Cruz(encouraged me) and each and every person of unite 2 who inspired me to do this ... Thank You Every Much 
 
 Introduction
 ------
@@ -24,7 +26,7 @@ Here are some codenames to be used for these clones
 
 Requirements
 ------
-Ubuntu 10.0 + 
+Ubuntu 10.0 + [Recommended(Ubuntu 16.04 LTS/Linux Mint 18.1 Cinnamon)] 
 
 Essential kernel Packages
 
@@ -169,5 +171,5 @@ chmod a+x mkimage
 
 10. Now in order to test it replace ```zImage_with_header ``` with ```kernel``` in your stock boot of stock rom ...
 
-Thank You Very Much ...
-Powered By Manjot Sidhu
+Thank You Very Much Manjot Sidhu ...
+Maintained by: Sunmughan Swamy <3
