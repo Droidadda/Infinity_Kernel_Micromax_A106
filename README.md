@@ -128,11 +128,11 @@ Compiling Kernel
 
 1. Open Terminal in desktop and First Clone This Repository By 
 ```
-git clone https://github.com/manjotsidhu/android_kernel_a106_wiko.git
+git clone https://github.com/Droidadda/Infinity_Kernel_Micromax_A106.git
 ```
 2. Rename cloned folder to kernel_source By
 ```
-mv android_kernel_a106_wiko ~/kernel_source
+mv Infinity_Kernel_Micromax_A106 ~/kernel_source
 ```
 
 3. Now Lets get the toolchain (arm-linux-androideabi-4.7)
@@ -140,13 +140,22 @@ mv android_kernel_a106_wiko ~/kernel_source
 cd kernel_source
 git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7
 ```
+For (arm-linux-androideabi-4.9)
+```
+cd kernel_source
+git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9
+```
 
 4. Some Commands to make kernel source know that we are compiling for a device :p
 > NOTE:- MAKE SURE TO REPLACE CODENAME 
+* For (arm-linux-androideabi-4.7)
 ```
 export TARGET_BUILD_VARIANT=user TARGET_PRODUCT=(codename) MTK_ROOT_CUSTOM=../mediatek/custom/ TARGET_KERNEL_VERSION=(codename) &&export PATH=~/kernel_source/arm-linux-androideabi-4.7/bin:$PATH&&export CROSS_COMPILE=arm-linux-androideabi-&&export ARCH=arm
 ````
-
+* For (arm-linux-androideabi-4.9)
+```
+export TARGET_BUILD_VARIANT=user TARGET_PRODUCT=(codename) MTK_ROOT_CUSTOM=../mediatek/custom/ TARGET_KERNEL_VERSION=(codename) &&export PATH=~/kernel_source/arm-linux-androideabi-4.9/bin:$PATH&&export CROSS_COMPILE=arm-linux-androideabi-&&export ARCH=arm
+````
 5. The Main Step 
 > NOTE:- MAKE SURE TO REPLACE CODENAME
 ```
