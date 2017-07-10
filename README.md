@@ -1,4 +1,7 @@
-# infinity_kernel_micromax_a106
+<h2><center> Infinity Kernel </center></h2>
+
+<h3> <center>For Micromax A106 </center> </h3>
+
 > Micromax A106 (Unite 2) upstreamed kernel v3.4.113. All new stuffs added including (OC, Gov, Hotplugs, cpio, io schedulers,etc). Thanks to my brother Manjot Sidhu for releasing Kernel Source.
 Custom Kitkat Kernel Source For Wiko Bloom , Micromax Unite 2 and other clones.
 ------
