@@ -87,7 +87,7 @@ SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="4ee2", MODE="0600", 
 # fastboot protocol on manta (Nexus 10)
 SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="4ee0", MODE="0600", OWNER="<username>"
 ```
-3. Add The below code at the end of bash.rc
+3. Add The below code at the end of etc/bash.bashrc
 ```
 export USE_CCACHE=1
 ```
