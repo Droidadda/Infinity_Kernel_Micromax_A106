@@ -94,6 +94,7 @@ SUBSYSTEM=="usb", ATTR{idVendor}=="18d1", ATTR{idProduct}=="4ee0", MODE="0600", 
 ```
 export USE_CCACHE=1
 ```
+
 4. <strong>JDK 1.6 (6u45)</strong>
 
 Download jdk1.6 6u45 from here :- http://www.oracle.com/technetwork/java/javase/downloads/java-archive-downloads-javase6-419409.html
@@ -117,10 +118,12 @@ ls -la /etc/alternatives/java*
 ```
 Now To Verify java is installed do ```java -version```
 
+
 5. <strong>Git :-</strong>
 ```
 sudo apt-get install git
 ```
+
 6. <strong>Python and Make are preinstalled from ubuntu 10.0+</strong>
 
 Compiling Kernel
@@ -130,6 +133,7 @@ Compiling Kernel
 ```
 git clone https://github.com/Droidadda/Infinity_Kernel_Micromax_A106.git
 ```
+
 2. <strong>Rename cloned folder to kernel_source By</strong>
 ```
 mv Infinity_Kernel_Micromax_A106 ~/kernel_source
@@ -140,7 +144,7 @@ mv Infinity_Kernel_Micromax_A106 ~/kernel_source
 cd kernel_source
 git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.7
 ```
-<strong><i>For (arm-linux-androideabi-4.9)</i><strong>
+* <strong><i>For (arm-linux-androideabi-4.9)</i><strong>
 ```
 cd kernel_source
 git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/arm-linux-androideabi-4.9
@@ -152,23 +156,28 @@ git clone https://android.googlesource.com/platform/prebuilts/gcc/linux-x86/arm/
 ```
 export TARGET_BUILD_VARIANT=user TARGET_PRODUCT=(codename) MTK_ROOT_CUSTOM=../mediatek/custom/ TARGET_KERNEL_VERSION=(codename) &&export PATH=~/kernel_source/arm-linux-androideabi-4.7/bin:$PATH&&export CROSS_COMPILE=arm-linux-androideabi-&&export ARCH=arm
 ````
+
 * <strong><i>For (arm-linux-androideabi-4.9)</i></strong>
 ```
 export TARGET_BUILD_VARIANT=user TARGET_PRODUCT=(codename) MTK_ROOT_CUSTOM=../mediatek/custom/ TARGET_KERNEL_VERSION=(codename) &&export PATH=~/kernel_source/arm-linux-androideabi-4.9/bin:$PATH&&export CROSS_COMPILE=arm-linux-androideabi-&&export ARCH=arm
 ````
+
 5. <strong>The Main Step </strong>
 > <strong>NOTE:-</strong> MAKE SURE TO REPLACE CODENAME
 ```
 ./mk (codename) n k
 ```
+
 It may take time upto 10 mins max 
 
 6. <strong>The compiled Kernel Sourced is generated in out folder</strong>
    If u get error then the error log is in ```out/target/product/(codename)_kernel_err.log ```
 >Check error log carefully , your mistakes will be highlighted
 
+
 7. <strong>If the kernel compiled successfully</strong>
    The newly compiled kernel will be in the folder ```out/target/product/(codename)/obj/kernel_obj/arm/arch/boot/zImage ```
+
 
 8. <strong>Now We Need To Add Mediatek Header to it</strong>
    Make a new folder in your desktop/source and copy zImage in it ... 
