@@ -13,7 +13,7 @@ Bugs :- N/A
 
 Contributors
 ------
->GOD , Sunmughan Swamy(Maintainer) , Manjot Sidhu (Created this Kernel Source) , Monty Kumar(helping) , Ranjan(mentor) , Divyrajsinh Jadeja(Tester) , Anurag D'Cruz(motivator) and each and every person of unite 2 who inspired me to do this ... Thank You Every Much 
+>GOD , Sunmughan Swamy(Maintainer) , Manjot Sidhu (Created this Kernel Source) , Monty Kumar(helping) , Sandeep Sethi(helped me always) , Ranjan(mentor) , Divyrajsinh Jadeja(Tester) , Anurag D'Cruz(motivator) and each and every person of unite 2 who inspired me to do this ... Thank You Every Much 
 
 Introduction
 ------
