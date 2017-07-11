@@ -29,15 +29,11 @@ Here are some codenames to be used for these clones
 
 Requirements
 ------
-Ubuntu 10.0 + [Recommended(Ubuntu 16.04 LTS/Linux Mint 18.1 Cinnamon)] 
-
-Essential kernel Packages
-
-Android Device To Test
-
-Common Sense (which is not so common)
-
-Setting Up The Build Environment
+* Ubuntu 10.0 + [Recommended(Ubuntu 16.04 LTS/Linux Mint 18.1 Cinnamon)] 
+* Essential kernel Packages
+* Android Device To Test
+* Common Sense (which is not so common)
+* Setting Up The Build Environment
 ------
 >NOTE :- Do first ```sudo apt get-update``` before installing any packages 
 
