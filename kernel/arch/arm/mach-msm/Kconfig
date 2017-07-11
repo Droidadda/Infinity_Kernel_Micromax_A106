@@ -147,7 +147,11 @@ config MACH_MSM8960_RUMI3
 	bool "MSM8960 RUMI3"
 	help
 	  Support for the Qualcomm MSM8960 RUMI3 emulator.
-
+config FORCE_FAST_CHARGE
+        bool "Force AC charge mode at will"
+        default y
+        help
+ A simple sysfs interface to force adapters that are detected as USB to charge as AC.
 endmenu
 
 config MSM_SMD_PKG3
