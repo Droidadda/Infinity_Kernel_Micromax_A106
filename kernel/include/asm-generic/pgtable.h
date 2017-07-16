@@ -436,6 +436,19 @@ extern void untrack_pfn_vma(struct vm_area_struct *vma, unsigned long pfn,
 				unsigned long size);
 #endif
 
+#ifdef CONFIG_UKSM
+static inline int is_uksm_zero_pfn(unsigned long pfn)
+{
+	extern unsigned long uksm_zero_pfn;
+        return pfn == uksm_zero_pfn;
+}
+#else
+static inline int is_uksm_zero_pfn(unsigned long pfn)
+{
+        return 0;
+}
+#endif
+
 #ifdef CONFIG_MMU
 
 #ifndef CONFIG_TRANSPARENT_HUGEPAGE
