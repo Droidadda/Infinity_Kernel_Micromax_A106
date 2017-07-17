@@ -174,10 +174,6 @@ static void __exit sweep2wake_exit(void)
 	return;
 }
 
-#ifdef CONFIG_TOUCHSCREEN_DOUBLETAP2WAKE
-#define DT2W_ANDROID_TOUCH_DECLARED
-#endif
-
 module_init(sweep2wake_init);
 module_exit(sweep2wake_exit);
 
