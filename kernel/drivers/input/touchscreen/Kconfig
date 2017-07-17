@@ -840,8 +840,20 @@ config TOUCHSCREEN_STMPE
 	  module will be called stmpe-ts.
 
 config TOUCHSCREEN_SWEEP2WAKE
-        tristate "Sweep2Wake for touchscreens"
-        default n
+	tristate "Sweep2Wake for touchscreens"
+	select TOUCHSCREEN_PREVENT_SLEEP
+	default n
+
+config TOUCHSCREEN_DOUBLETAP2WAKE
+	tristate "DoubleTap2Wake for touchscreens"
+	select TOUCHSCREEN_PREVENT_SLEEP
+	default n
+	
+config TOUCHSCREEN_PREVENT_SLEEP
+	bool "Inihibit sleep on modified touchscreen drivers"
+ 	default
+	help
+	This disables the sleep function of modified touchscreen drivers.
 
 config TOUCHSCREEN_TPS6507X
 	tristate "TPS6507x based touchscreens"
