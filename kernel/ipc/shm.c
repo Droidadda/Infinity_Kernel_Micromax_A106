@@ -1048,6 +1048,7 @@ long do_shmat(int shmid, char __user *shmaddr, int shmflg, ulong *raddr)
 		 * If shm segment goes below stack, make sure there is some
 		 * space left for the stack to grow (at least 4 pages).
 		 */
+		
 		if (addr < current->mm->start_stack &&
 		    addr > current->mm->start_stack - size - PAGE_SIZE * 5)
 			goto invalid;
