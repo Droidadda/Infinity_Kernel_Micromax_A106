@@ -27,6 +27,7 @@
 #define __ENABLE_WDT_AT_INIT__
 
 //------------------------------------------------------------------------
+
 #define PFX "wdk: "
 #define DEBUG_WDK	0
 #if DEBUG_WDK
