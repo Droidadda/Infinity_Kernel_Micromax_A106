@@ -104,6 +104,7 @@ extern void tc_init(void);
  * operations which are not allowed with IRQ disabled are allowed while the
  * flag is set.
  */
+
 bool early_boot_irqs_disabled __read_mostly;
 
 enum system_states system_state __read_mostly;
@@ -140,6 +141,7 @@ static char *ramdisk_execute_command;
  * For ex. kdump situaiton where previous kernel has crashed, BIOS has been
  * skipped and devices will be in unknown state.
  */
+
 unsigned int reset_devices;
 EXPORT_SYMBOL(reset_devices);
 
@@ -190,6 +192,7 @@ static int __init obsolete_checksetup(char *line)
  * This should be approx 2 Bo*oMips to start (note initial shift), and will
  * still work even if initially too large, it will just take slightly longer
  */
+
 unsigned long loops_per_jiffy = (1<<12);
 
 EXPORT_SYMBOL(loops_per_jiffy);
@@ -218,6 +221,7 @@ static int __init loglevel(char *str)
 	 * to prevent blind crashes (when loglevel being set to 0) that
 	 * are quite hard to debug
 	 */
+	
 	if (get_option(&str, &newlevel)) {
 		console_loglevel = newlevel;
 		return 0;
@@ -249,6 +253,7 @@ static int __init repair_env_string(char *param, char *val)
  * Unknown boot options get handed to init, unless they look like
  * unused parameters (modprobe will find them in /proc/cmdline).
  */
+
 static int __init unknown_bootoption(char *param, char *val)
 {
 	repair_env_string(param, val);
@@ -295,12 +300,14 @@ static int __init init_setup(char *str)
 	unsigned int i;
 
 	execute_command = str;
+	
 	/*
 	 * In case LILO is going to boot us with default command line,
 	 * it prepends "auto" before the whole cmdline which makes
 	 * the shell think it should execute a script with such name.
 	 * So we ignore all arguments entered _before_ init=... [MJ]
 	 */
+	
 	for (i = 1; i < MAX_INIT_ARGS; i++)
 		argv_init[i] = NULL;
 	return 1;
@@ -340,6 +347,7 @@ static inline void smp_prepare_cpus(unsigned int maxcpus) { }
  * parsing is performed in place, and we should allow a component to
  * store reference of name/value for future reference.
  */
+
 static void __init setup_command_line(char *command_line)
 {
 	saved_command_line = alloc_bootmem(strlen (boot_command_line)+1);
@@ -364,11 +372,13 @@ static noinline void __init_refok rest_init(void)
 	int pid;
 
 	rcu_scheduler_starting();
+	
 	/*
 	 * We need to spawn init first so that it obtains pid 1, however
 	 * the init task will end up wanting to create kthreads, which, if
 	 * we schedule it before we create kthreadd, will OOPS.
 	 */
+	
 	kernel_thread(kernel_init, NULL, CLONE_FS | CLONE_SIGHAND);
 	numa_default_policy();
 	pid = kernel_thread(kthreadd, NULL, CLONE_FS | CLONE_FILES);
@@ -381,6 +391,7 @@ static noinline void __init_refok rest_init(void)
 	 * The boot idle thread must execute schedule()
 	 * at least once to get things moving:
 	 */
+	
 	init_idle_bootup_task(current);
 	schedule_preempt_disabled();
 	/* Call into cpu_idle with preempt disabled */
@@ -457,6 +468,7 @@ static void __init mm_init(void)
 	 * page_cgroup requires contiguous pages,
 	 * bigger than MAX_ORDER unless SPARSEMEM.
 	 */
+	
 	page_cgroup_init_flatmem();
 	mem_init();
 	kmem_cache_init();
@@ -474,6 +486,7 @@ asmlinkage void __init start_kernel(void)
 	 * Need to run as early as possible, to initialize the
 	 * lockdep hash:
 	 */
+	
 	lockdep_init();
 	smp_setup_processor_id();
 	debug_objects_early_init();
