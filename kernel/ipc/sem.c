@@ -70,7 +70,7 @@
  * - There are two lists of the pending operations: a per-array list
  *   and per-semaphore list (stored in the array). This allows to achieve FIFO
  *   ordering without always scanning all pending operations.
- *   The worst-case behavior is nevertheless O(N^2) for N wakeups.
+ *   The worst-case behavior is nevertheless O(N^2) for N wakeups. 
  */
 
 #include <linux/slab.h>
