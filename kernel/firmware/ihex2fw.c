@@ -34,6 +34,7 @@ struct ihex_binrec {
 /**
  * nybble/hex are little helpers to parse hexadecimal numbers to a byte value
  **/
+
 static uint8_t nybble(const uint8_t n)
 {
        if      (n >= '0' && n <= '9') return n - '0';
