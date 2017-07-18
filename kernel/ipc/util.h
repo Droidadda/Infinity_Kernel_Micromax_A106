@@ -4,7 +4,7 @@
  *
  * ipc helper functions (c) 1999 Manfred Spraul <manfred@colorfullife.com>
  * namespaces support.      2006 OpenVZ, SWsoft Inc.
- *                               Pavel Emelianov <xemul@openvz.org>
+ *                              Pavel Emelianov <xemul@openvz.org>
  */
 
 #ifndef _IPC_UTIL_H
